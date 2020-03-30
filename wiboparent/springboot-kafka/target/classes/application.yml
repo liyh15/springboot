@@ -1,0 +1,29 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: kafka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+kafka:
+  consumer:
+    servers: 192.168.56.200:9092
+    auto: false
+    offset: earliest
+    records: 5
+    heartTime: 5000
+    sessionTime: 15000
+    maxPollTime: 2000
+    concurrency: 1
+    groupId: hello
+  produce:
+    servers: 192.168.56.200:9092
+    retries: 0
+    batchSize: 16384
+    bufferMemory: 33554432
+    acks: 1
+
+
+

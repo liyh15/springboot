@@ -1,0 +1,22 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+zuul:
+  routes:
+    server:
+      path: /my-server/**
+      serviceId: my-server
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+
+ribbon:
+  eureka:
+    enabled: false
+my-server:
+  ribbon:
+    listOfServers: http://localhost:8081,http://localhost:8085
