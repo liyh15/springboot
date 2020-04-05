@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.migu.task.mapper.MysqlMapper">
+   <select id="selectTest" resultType="com.wibo.common.pojo.Test">
+      SELECT
+        id,
+        name
+      FROM
+        test
+   </select>
+    <select id="selectTaskJob" resultType="com.wibo.common.pojo.TastJob">
+      SELECT
+        *
+      FROM
+        task
+      WHERE
+        taskCode = #{taskCode, jdbcType = VARCHAR}
+   </select>
+</mapper>

@@ -13,6 +13,7 @@
         <module>springboot-kafka</module>
         <module>springboot-fastdfs</module>
         <module>springboot-test</module>
+        <module>springboot-task</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
